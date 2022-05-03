@@ -15,17 +15,23 @@
 <h2>Fill in the details</h2>
 <br>
 <form:form action="show" modelAttribute="employee">
-    Name <form:input path="name"/><br>
-    Surname <form:input path="surname"/><br>
-    Salary <form:input path="salary"/><br>
+    Name <form:input path="name"/> <form:errors path="name"/>
+    <br><br>
+    Surname <form:input path="surname"/> <form:errors path="surname"/>
+    <br><br>
+    Salary <form:input path="salary"/> <form:errors path="salary"/>
+    <br><br>
     Department
     <form:select path="department">
         <form:options items="${employee.departments}"/>
-    </form:select><br>
+    </form:select>
+    <br><br>
     Employment
-    <form:radiobuttons path="employment" items="${employee.employments}"/><br>
+    <form:radiobuttons path="employment" items="${employee.employments}"/>
+    <br><br>
     Language(s)
-    <form:checkboxes path="languages" items="${employee.langMap}"/><br>
+    <form:checkboxes path="languages" items="${employee.langMap}"/>
+    <br><br>
     <input type="submit" value="OK">
 </form:form>
 </body>
